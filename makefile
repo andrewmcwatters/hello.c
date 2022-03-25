@@ -3,3 +3,5 @@ a.out : hello.c
 	cc hello.c
 clean :
 	rm a.out
+check :
+	test "$$(./a.out)" = 'hello, world'
