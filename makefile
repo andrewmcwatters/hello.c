@@ -1,7 +1,6 @@
-# https://www.gnu.org/software/make/manual/make.html#Simple-Makefile
-a.out : hello.c
-	cc hello.c
-clean :
+a.out: hello.c
+	$(CC) $(CFLAGS) $(LDFLAGS) $<
+clean:
 	rm a.out
-check :
+check:
 	test "$$(./a.out)" = 'hello, world'
