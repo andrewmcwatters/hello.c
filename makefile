@@ -1,6 +1,6 @@
 a.out: hello.c
 	$(CC) $(CFLAGS) $(LDFLAGS) $<
 clean:
-	rm a.out
+	rm -f a.out
 check:
 	test "$$(./a.out)" = 'hello, world'
